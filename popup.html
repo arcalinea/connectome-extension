@@ -4,17 +4,20 @@
   <head>
     <script src="jquery-3.3.1.min.js"></script>
     <script type="text/javascript" src="popup.js"></script>
+    <link rel="stylesheet" type="text/css" href="popup.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   </head>
-  <body style="width: 300px; border: 0; margin: 0; padding:0;">
-    <div style="height: 25px; background: #508af4;">
-      <div style="padding-left: 10px;">
-        <h2 style="color: white;">Invite Friends</h2>
-      </div>
+  <body style="width: 300px; min-height: 220px; border: 0; margin: 0; padding:0;">
+    <div class="navbar-brand" style="background: #508af4;">
+        <div style="color: white;  text-align:center;">Connectome</div>
     </div>
     
-    <div style="padding: 10px;">
-      <input type="checkbox" name="alice_smith" value="alice_smith">Alice Smith<br />
-      <input type="checkbox" name="bob_johnson" value="bob_johnson">Bob Johnson<br />
+    <div id="contacts" style="padding: 10px;">
+      <label>Invite Friends to event:</label>
+      <ul>
+        <li><input type="checkbox" name="alice_smith" value="alice_smith">Alice Smith</li>
+        <li><input type="checkbox" name="bob_johnson" value="bob_johnson">Bob Johnson</li>
+      </ul>
     </div>
     
     <div style="padding: 10px;">
@@ -27,6 +30,11 @@
       <input type="text" id="email" name="email" placeholder="Email address">
       <input type="submit" value="Send">
     </form>
+    
+    <div class="navbar">
+      <a href="#add" class="active"><i class="material-icons">person_add</i</a>
+      <a href="#settings"><i class="material-icons">settings</i></a>
+    </div>
 
   </body>
 </html>

@@ -1,8 +1,8 @@
 {
   "manifest_version": 2,
 
-  "name": "Click to execute",
-  "description": "Execute script after click in popup.html (chrome extension) http://stackoverflow.com/questions/20764517/execute-script-after-click-in-popup-html-chrome-extension.",
+  "name": "Connectome",
+  "description": "Send invites and messages from anywhere.",
   "version": "1.0",
 
   "permissions": [
