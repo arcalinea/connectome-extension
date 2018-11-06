@@ -5,15 +5,31 @@
   line-height: 20px;
 }
 
+/* align the dumb checkboxes */
+input[type=checkbox], input[type=radio] {
+  vertical-align: middle;
+  position: relative;
+  bottom: 1px;
+}
+
+#contacts {
+  padding: 10px;
+}
+
+#contacts label {
+  padding-left: 5px;
+}
 
 #contacts ul {
   margin: 0;
+  margin-top: 5px;
+  padding: 0;
   list-style: none;
 }
 
 #contacts li {
-    position: relative;
-    padding: 4px 15px 4px 5px;
+    /* position: relative; */
+    padding: 4px 5px 4px 5px;
     line-height: 15px;
     font-size: 12px;
 }
