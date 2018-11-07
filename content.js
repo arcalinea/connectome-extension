@@ -1,6 +1,19 @@
-console.log("Executing script")
-var event = getFacebookEvent();
-chrome.runtime.sendMessage(event); 
+console.log("Executing content.js script");
+
+chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
+    console.log("request received in content.js", request, sender);
+    console.log(sender.tab ? "from a content script:" + sender.tab.url : "from the extension");
+    
+    var event = getFacebookEvent();
+    event['invitees'] = request.contacts;
+    chrome.runtime.sendMessage(event); 
+    
+    if (request.contacts){
+      console.log("Inviting request.contacts", request.contacts);
+      sendResponse({confirmation: "invited"});
+    }
+});
+
 
 function getFacebookEvent(){
     var event = {};
